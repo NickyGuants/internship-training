@@ -25,3 +25,7 @@ p{
 #cat-photo{
     background-color: greenyellow;
 }
+
+[type='checkbox']{
+    margin: 10px 0px 15px 0px;
+  }
