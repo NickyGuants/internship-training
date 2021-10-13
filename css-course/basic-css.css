@@ -11,10 +11,14 @@ p{
 }
 .smaller-image{
     width: 100px;
+    border-radius: 50%;
 }
 .thick-green-border{
     border-color: green;
     border-width: 10px;
     border-style: solid;
     border-radius: 20px;
+}
+.silver-background{
+    background-color: silver;
 }
