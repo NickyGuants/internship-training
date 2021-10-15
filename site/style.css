@@ -1,0 +1,100 @@
+nav{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    
+}
+nav a{
+    text-decoration: none;
+    border-style:hidden;
+    box-shadow: 0 0px 4px 0; 
+    width: 23%;
+    background-color: white;
+    color: black;
+    font-size: large;
+    padding: 15px 15px 15px 15px;
+}
+
+#content{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;  
+    height: 600px;
+}
+#hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 77%;
+    background-image: url(/media/123.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: white;
+    font-size: 30px;
+}
+#hero button{
+    color: white;
+    background-color: black;
+    padding: 10px 10px 10px 10px;
+}
+
+.membership{
+    width: 22%;
+}
+.card{
+    box-shadow: 0 4px 8px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 48%;
+}
+.card button{
+    margin-bottom: 25px;
+    color: white;
+    background-color: black;
+    padding: 10px 10px 10px 10px;
+}
+#mem{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+}
+#pro{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    margin-top: 20px;  
+}
+#features{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    height: 250px;
+}
+.feat{
+    box-shadow: 0 4px 8px 0;
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.feat h5{
+    text-align:center;
+    color:blue;
+}
+footer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 30px;
+    background-color: black;
+    color: white;
+    height: 80px;
+}
