@@ -98,3 +98,58 @@ footer{
     color: white;
     height: 80px;
 }
+
+@media only screen and (max-width: 580px) {
+    nav{
+        display: flex;
+        flex-direction: column;
+    }
+    nav a{
+        width: 100%;
+        margin: 5px;
+    }
+    #content{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    #hero{
+        width: 100%;
+    }
+    #membership{
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .card{
+        box-shadow: 0 4px 8px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+        width: 48%;
+    }
+    .card button{
+        margin-bottom: 10px;
+    }
+    #features{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .feat{
+        box-shadow: 0 4px 8px 0;
+        width: 100%;
+        margin: 10px 0 10px 0;
+        justify-content: center;
+    
+    }
+    footer{
+        height: auto;
+        margin-top: 0px;
+    }
+  }
+  
