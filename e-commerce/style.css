@@ -100,6 +100,19 @@
     height: auto;
     margin-top: 30px;
 }
+nav{
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+}
+nav a{
+  text-decoration: none;
+  margin: 20px;
+  color: black;
+}
 .card{
     width: 24%;
     box-shadow: 0 4px 8px 0;
@@ -121,6 +134,9 @@
     margin-left: auto;
     margin-right: auto;
     height: 400px;
+}
+.card p{
+  font-size: 30px;
 }
 footer{
     display: flex;
