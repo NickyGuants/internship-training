@@ -97,16 +97,18 @@
 /*CARD */
 .card-container{
     display: flex;
-    height: 600px;
+    height: auto;
+    margin-top: 30px;
 }
 .card{
+    width: 24%;
     box-shadow: 0 4px 8px 0;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
     height: auto;
-    margin: 10px 10px 10px 10px;
+    margin: 10px ;
 }
 .card button{
     margin-bottom: 30px;
@@ -115,12 +117,10 @@
     padding: 10px 10px 10px 10px;
 }
 .card img{
-    height: auto;
-    max-width: 100%;
-    display: block;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
-    height: 80%;
+    height: 400px;
 }
 footer{
     display: flex;
