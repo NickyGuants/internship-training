@@ -5,7 +5,7 @@
   width: 100%;
   position: relative;
   margin: auto;
-  height: 500px;
+  height: 600px;
 }
 
 /* Hide the images by default */
@@ -112,6 +112,7 @@ nav a{
   text-decoration: none;
   margin: 20px;
   color: black;
+  font-size: larger;
 }
 .card{
     width: 24%;
@@ -146,5 +147,4 @@ footer{
     color: white;
     height: 100px;
     align-items: center;
-    text-align: center;
 }
