@@ -134,7 +134,7 @@ nav a{
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    height: 400px;
+    height: auto;
 }
 .card p{
   font-size: 30px;
