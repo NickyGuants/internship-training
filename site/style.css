@@ -63,6 +63,9 @@ nav a{
     text-align: center;
     justify-content: space-between;
 }
+aside p{
+    font-size: 50px;
+}
 #pro{
     display: flex;
     flex-direction: column;
@@ -126,6 +129,9 @@ footer{
         align-items: baseline;
         width: 100%;
         justify-content: space-between;
+    }
+    aside p{
+        font-size: 50px;
     }
     .card{
         box-shadow: 0 4px 8px 0;
