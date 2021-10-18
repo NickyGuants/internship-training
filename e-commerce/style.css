@@ -97,7 +97,7 @@
 /*CARD */
 .card-container{
     display: flex;
-    
+    height: 600px;
 }
 .card{
     box-shadow: 0 4px 8px 0;
@@ -108,12 +108,19 @@
     height: auto;
     margin: 10px 10px 10px 10px;
 }
+.card button{
+    margin-bottom: 30px;
+    color: white;
+    background-color: black;
+    padding: 10px 10px 10px 10px;
+}
 .card img{
     height: auto;
     max-width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    height: 80%;
 }
 footer{
     display: flex;
