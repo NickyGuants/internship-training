@@ -6,7 +6,7 @@
 //my new array. If the element does not exist, I push it to the new array if it exists 
 //we continue to the 
 function distinct(arr){
-    newArr=[];
+    let newArr=[];
     for(let i=0; i<arr.length; i++){
         if(newArr.includes(arr[i])==false){
             newArr.push(arr[i]);
