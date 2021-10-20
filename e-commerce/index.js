@@ -23,10 +23,30 @@ function renderProducts(){
       <img src="${product.imgSrc}" alt="${product.name}">
       <p>${product.name}</p>
       <p>${product.description}</p>
-      <button>Add to Cart</button>
+      <div class="add-to-cart" onclick="addToCart(${product.id})">
+        <button>Add to Cart</button>
+      </div>
     </div>  
     `
   });
 }
 renderProducts();
 
+//cart array for items in the array
+let cart =[];
+
+function addToCart(id){
+  if(cart.some((item)=> item.id === id)){
+    alert("Product already in cart");
+  }else{
+    const item =products.find((product) => product.id === id);
+    cart.push({
+      ...item,
+      numberOfUnits: 1,
+    });
+    console.log(cart)
+  }
+  updateCart();
+}
+
+//update cart 
