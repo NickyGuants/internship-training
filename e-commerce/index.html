@@ -8,12 +8,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <a href="#Home">HOME</a>
-    <a href="#products">PRODUCTS</a>
-    <a href="#contact">CONTACT US</a>
-    <a id="cart" href="cart.html">CART</a>
-  </nav>
+  <div class="navBar">
+    <nav>
+      <div><a href="#Home">HOME</a></div>
+      <div><a href="#products">PRODUCTS</a></div>
+      <div><a href="#contact">CONTACT US</a></div>
+      <div class="cart-bag">
+        <a id="Cart" href="#cart"><img src="./media/bag.png" alt="cart">
+          <div class="total-items">0</div></a>
+        </div>
+    </nav>
+</div>
     <!-- Slideshow container -->
 <div class="slideshow-container">
 
@@ -52,6 +57,24 @@
   <div class="products">
      
   </div>
+  <div id="cart" class="cart">
+    <h1>Your Cart</h1>
+    <div class="cart-header">
+        <div class="column1">Item</div>
+        <div class="column2">Unit price</div>
+        <div class="column3">Units</div>
+        <div class="column3">Sub Total</div>
+        <div class="column3">Discount</div>
+        <div class="column3">Total Price</div>
+    </div>
+    <div class="cart-items">
+        <!-- render cart items here -->
+        
+    </div>
+    <div class="cart-footer">
+        
+    </div>
+</div>
   <footer>
     <p>Copyright &copy; 2021, XYZ</p>
   </footer>
