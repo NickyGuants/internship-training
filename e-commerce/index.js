@@ -2,6 +2,9 @@ const bedEl=document.querySelector(".products");
 const cartItemsEl= document.querySelector(".cart-items");
 const cartFooterEl= document.querySelector(".cart-footer");
 const totalItemsEl =document.querySelector(".total-items");
+const cartEl =document.getElementById("Cart");
+const modal_container= document.getElementById("modal-container");
+const close= document.getElementById("continue-shopping");
 
 let slideIndex = 0;
 showSlides();
@@ -15,7 +18,7 @@ function showSlides() {
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}
   slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 5000); // Change image every 2 seconds
+  setTimeout(showSlides, 5000); // Change image every 5 seconds
 }
 
 //fUNCTIONALITY
@@ -25,9 +28,10 @@ function renderProducts(){
     <div class="card">
       <img src="${product.imgSrc}" alt="${product.name}">
       <p>${product.name}</p>
+      <p>Price: $${product.price}</p>
       <p>${product.description}</p>
-      <div class="add-to-cart" onclick="addToCart(${product.id})">
-        <button>Add to Cart</button>
+      <div class="add-to-cart" >
+        <button onclick="addToCart(${product.id})">Add to Cart</button>
       </div>
     </div>  
     `
@@ -69,6 +73,7 @@ function renderCartItems(){
     let payableAmount=0;
     let totalItems=0;
     cartItemsEl.innerHTML = ""; // clear cart element
+
     cart.forEach((item)=>{
       subTotal= item.price*item.numberOfUnits;
       if(item.numberOfUnits >=50){
@@ -126,11 +131,17 @@ function renderCartItems(){
           Total  price after discount: $<span>${payableAmount}</span>
         </div>
         <div class="checkout">
-          Proceed to checkout
+          <button id="checkout">Proceed to Checkout</button>
+          <button onclick="closeCartModal()" id="continue-shopping">Continue Shopping</button>
         </div>
         `;
+  
+    });
 
-    }) 
+    cartEl.addEventListener("click", () =>{
+      modal_container.classList.add('show');
+    });
+    
 }
 
 
@@ -151,4 +162,8 @@ function changeNumberOfUnits(action, id){
       };
   });
   updateCart();
+}
+
+function closeCartModal(){
+    modal_container.classList.remove('show');
 }
