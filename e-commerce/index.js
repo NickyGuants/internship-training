@@ -40,7 +40,8 @@ function renderProducts(){
 renderProducts();
 
 //cart array for items in the array
-let cart =[];
+let cart = JSON.parse(localStorage.getItem("CART")) ||[];
+updateCart();
 
 function addToCart(id){
   if(cart.some((item)=> item.id === id)){
@@ -62,6 +63,8 @@ function updateCart(){
   renderCartItems();
   localStorage.setItem("CART", JSON.stringify(cart));
 }
+
+
 
 //render cart items
 function renderCartItems(){
@@ -96,6 +99,7 @@ function renderCartItems(){
                     <div class="item-info">
                         <img src="${item.imgSrc}" alt="Double size bed">
                         <h4>${item.name}</h4>
+                        <button onclick="removeItemFromCart(${item.id})">Remove Item </button>
                     </div>
                     <div class="unit-price">
                         <small>$</small>${item.price}
@@ -106,13 +110,13 @@ function renderCartItems(){
                         <div class="btn plus" onclick="changeNumberOfUnits('plus', ${item.id})">+</div>           
                     </div>
                     <div class="sub-total">
-                        <small>$</small>${subTotal}
+                        <small>$</small>${subTotal.toFixed(2)}
                     </div>
                     <div class="discount">
-                        <small>$</small>${discount}
+                        <small>$</small>${discount.toFixed(2)}
                     </div>
                     <div class="total-price">
-                        <small>$</small>${totalPrice}
+                        <small>$</small>${totalPrice.toFixed(2)}
                     </div>
                 </div>
         `;
@@ -122,13 +126,13 @@ function renderCartItems(){
 
         cartFooterEl.innerHTML =`
         <div class="grand-total">
-            Grand total: $<span>${grandTotal}</span>
+            Grand total: $<span>${grandTotal.toFixed(2)}</span>
         </div>
         <div class="total-discount">
-          Total Discount: $<span>${totalDiscount}</span>
+          Total Discount: $<span>${totalDiscount.toFixed(2)}</span>
         </div>
         <div class="total-price">
-          Total  price after discount: $<span>${payableAmount}</span>
+          Total  price after discount: $<span>${payableAmount.toFixed(2)}</span>
         </div>
         <div class="checkout">
           <button id="checkout">Proceed to Checkout</button>
@@ -161,6 +165,12 @@ function changeNumberOfUnits(action, id){
         numberOfUnits,
       };
   });
+  updateCart();
+}
+
+function removeItemFromCart(id) {
+  cart = cart.filter((item) => item.id !== id);
+
   updateCart();
 }
 
