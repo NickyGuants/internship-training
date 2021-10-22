@@ -7,7 +7,7 @@
     <title>Shopping Site</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="Home">
   <div class="navBar">
     <nav>
       <div><a href="#Home">HOME</a></div>
@@ -57,24 +57,24 @@
   <div class="products">
      
   </div>
-  <div id="cart" class="cart">
-    <h1>Your Cart</h1>
-    <div class="cart-header">
-        <div class="column1">Item</div>
-        <div class="column2">Unit price</div>
-        <div class="column3">Units</div>
-        <div class="column3">Sub Total</div>
-        <div class="column3">Discount</div>
-        <div class="column3">Total Price</div>
+  <div class="modal-container" id="modal-container">
+      <div id="cart" class="cart">
+          <h1>Your Cart</h1>
+          <div class="cart-header">
+              <div class="column1">Item</div>
+              <div class="column2">Unit price</div>
+              <div class="column3">Units</div>
+              <div class="column3">Sub Total</div>
+              <div class="column3">Discount</div>
+              <div class="column3">Total Price</div>
+          </div>
+          <div class="cart-items">
+              <!-- render cart items here -->    
+          </div>
+          <div class="cart-footer">   
+          </div>
     </div>
-    <div class="cart-items">
-        <!-- render cart items here -->
-        
-    </div>
-    <div class="cart-footer">
-        
-    </div>
-</div>
+  </div>
   <footer>
     <p>Copyright &copy; 2021, XYZ</p>
   </footer>
