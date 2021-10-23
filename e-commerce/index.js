@@ -61,7 +61,7 @@ function addToCart(id){
 
 function updateCart(){
   renderCartItems();
-  localStorage.setItem("CART", JSON.stringify(cart));
+  
 }
 
 
